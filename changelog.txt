@@ -1,0 +1,19 @@
+= 1.7.1 =
+* PHP 5.4 compatibility patch
+
+= 1.7 = 
+* Images loaded eagerly be default.
+* Image lazy loading parameter.
+
+= 1.6.1 =
+Hotfix
+* CSS loading resolved
+* Widget show counter checkbox is correctly set
+
+= 1.6 =
+This release brings in some sorely desired features.
+* Support for captions.
+* Support for slide numbering.
+* Aria attributes for better accessibility.
+* Custom hooks for filtering slides and injecting additional CSS.
+* Resolves issue with first-time slider selection in widgets when only one slider has been created.

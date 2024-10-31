@@ -1,0 +1,83 @@
+.no-bs-image-slider
+{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	counter-reset: nbis-slides;
+	will-change: translate;
+}
+
+.no-bs-image-slider:hover::before
+{
+	content: "\23F8";
+	position: absolute;
+	padding: 0.25em 0.5em;
+	background-color: black;
+	z-index: 1;
+	color: white;
+	font-size: 1.5em;
+}
+
+.no-bs-image-slider .scrollpane
+{
+	display: flex;
+	animation-direction: normal;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+.no-bs-image-slider .scrollpane:hover
+{
+	animation-play-state: paused;
+}
+
+.nbis-slide
+{
+	display: block;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	counter-increment: nbis-slide;
+	counter-reset: nbis-slides var(--slide-count);
+}
+
+.show-counter .nbis-slide::before
+{
+
+	content: counter(nbis-slide) " / " counter(nbis-slides); 
+	display: block;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+.nbis-slide a
+{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.nbis-slide img
+{
+	width: 100%;
+	height: auto;
+}
+
+.nbis-slide figcaption
+{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.nbis-slide figcaption:empty
+{
+	display: none;
+}
